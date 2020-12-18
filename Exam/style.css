@@ -1,0 +1,216 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(255, 255, 255);}
+
+main{
+    display: grid;
+    grid-template-columns: 4fr 3fr 4fr;
+    grid-template-rows: 0.5fr 3fr 0.5fr 5fr 4fr 1fr;
+    height: 100vh;
+    background-color: rgb(204, 204, 204);
+}
+
+header{
+    grid-area: 1 / 1 / 2 / 4;
+    background-color: rgb(255, 255, 255);
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr;
+}
+
+.Body1{
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1.5fr 2fr 0.5fr 1fr;
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.yeux1{
+    grid-area : 2 / 2 / 3 / 3;
+    background-color: rgb(124, 124, 124);
+    border-radius: 100%;
+    animation: oeil 5s;
+    transform-origin: top ;
+}
+
+.yeux2{
+    grid-area : 2 / 4 / 3 / 5;
+    background-color: rgb(124, 124, 124);
+    border-radius: 100%;
+    animation: oeil 5s;
+    transform-origin: top ;
+}
+
+.bouche{
+    grid-area:  4 / 2 / 5 / 5;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 0.5fr;
+    grid-template-rows: 1fr;
+    background-color: grey;
+    margin-left: 10%;
+    margin-right: 10%;
+    animation: mouth 5s;
+    transform-origin: top ;
+}
+
+.bouche :nth-child(1){
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: rgb(63, 63, 63);
+}
+
+.bouche :nth-child(2){
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: rgb(63, 63, 63);
+}
+
+.Body0{
+    grid-area: 3 / 1 / 4 / 5;
+    background-color: rgb(178, 178, 178);
+    display: grid;
+    grid-template-columns: 4fr 3fr 4fr;
+    grid-template-rows: 1fr;
+}
+
+.cou{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: rgb(255, 255, 255);
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.Body2{
+    grid-area: 4 / 1 / 5 / 4;
+    background-color: rgb(153, 153, 153);
+    display: grid;
+    grid-template-columns: 4fr 3fr 4fr;
+    grid-template-rows: 4fr;
+}
+
+.corps{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.brasGauche{
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: white;
+    margin-left: 85%;
+    animation:  Gauche 5s;
+    transform-origin: top right;
+}
+
+.brasDroit{
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: white;
+    margin-right: 85%;
+    animation:  Droit 5s;
+    transform-origin: top left;
+}
+
+.Body3{
+    grid-area: 5 / 1 / 6 / 4;
+    background-color: rgb(127, 127, 127);
+    display: grid;
+    grid-template-columns: 4fr 1fr 0.1fr 1fr 4fr;
+}
+
+.jambeGauche{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: white;
+}
+
+.jambeDroite{
+    grid-area: 1 / 4 / 2 / 5;
+    background-color: white;
+}
+
+footer{
+    grid-area: 6 / 1 / 7 / 4;
+    background-color: rgb(127, 127, 127);
+    display: grid;
+    grid-template-columns: 4fr 1fr 0.1fr 1fr 4fr;
+}
+
+.piedGauche{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: white;
+    margin-top: 5%;
+}
+
+main:active{
+    opacity: 0;
+}
+
+.piedDroit{
+    grid-area: 1 / 4 / 2 / 5;
+    background-color: white;
+    margin-top: 5%;
+}
+
+.leave{
+    animation: leave 5s;
+}
+
+@keyframes Droit {
+    20%{transform: rotateZ(-150deg);}
+}
+
+@keyframes Gauche {
+    20%{transform: rotateZ(150deg);}
+}
+
+@keyframes mouth {
+    20%{transform: scale(1, 2);}
+}
+
+@keyframes oeil {
+    20%{transform: scale(1, 0.5);}
+}
+
+@keyframes pied {
+    0% { opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    11% {
+        opacity: 0;
+    }
+    98% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes leave {
+    0% {
+        transform: none;
+        opacity: 1;
+    }
+    20% {
+        transform: translate(-20%);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(100%);
+        opacity: 0;
+    }
+}
