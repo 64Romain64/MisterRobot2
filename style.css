@@ -1,0 +1,717 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 4fr 3fr 4fr;
+    grid-template-rows: 0.2fr 2.5fr 0.5fr 5fr 3fr 0.8fr;
+    height: 100vh;
+    background-color: rgb(0, 174, 255);
+
+}
+
+body, header, .Body1, .Body2, .Body3, footer{
+    background-color: rgb(191, 196, 199);
+}
+
+/* ----------------------------------------------------------------------
+-------------------                 HEADER                    ----------
+-------------------                  CLIC                      ----------
+-----------------------------------------------------------------------*/
+
+header {
+    grid-area: 1 / 1 / 2 / 4;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+button {
+    width: 8%;
+    padding: .4rem;
+    border: none;
+    margin-left: 1em;
+    font-size: 120%;
+    background: rgba(0, 0, 0, 0.555);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------------------
+-------------------                 BODY 0                     ----------
+-------------------                  TËTE                      ----------
+-----------------------------------------------------------------------*/
+
+.Body0 {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 2fr 1.5fr 1.5fr;
+    grid-template-rows: 1.5fr 1.5fr 2fr 0.7fr 0.7fr;
+    margin-top: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10% 10% 30% 30%;
+}
+
+/* .Body0:hover, .Body2:hover{
+    transition: transform 330ms ease-in-out;
+    transform: translate(1000px, 0);
+} */
+
+/*--------------- CHEVEUX  -------------- */
+
+.cheveux{
+    grid-area: 1 / 1 / 2 / 6;
+    border-top: 15px solid rgb(250, 183, 0);
+    border-radius: 13% 13% 0% 0%;
+}
+
+.cheveux1{
+    grid-area: 1 / 1 / 3 / 2;
+    border-left: 15px solid rgb(250, 183, 0);
+    border-radius: 0% 0% 0% 50%;
+}
+
+.cheveux2{
+    grid-area: 1 / 5 / 3 / 6;
+    border-right: 15px solid rgb(250, 183, 0);
+    border-radius: 0% 0% 50% 0%;
+}
+
+/*----------------- OREILLES  ---------------- */
+
+.oreilles{
+    grid-area: 2 / 2 / 3 / 3;
+    height : 0;
+    width : 0;
+    justify-self: center;
+    margin-top:8%;
+    border-top : 3vh solid rgb(255, 255, 255);
+    border-bottom : 3vh solid rgb(255, 255, 255);
+    border-left : 14vh solid rgb(255, 255, 255);
+    border-right : 14vh solid rgb(255, 255, 255);
+    border-radius: 40% 40% 40% 40%;
+}
+
+/*--------------- SOURCILS  -------------- */
+
+.sourcil1, .sourcil2{
+    border-top: 3px solid rgb(250, 183, 0);
+    margin-top: 65%;
+    border-radius: 50% 50%;
+}
+
+.sourcil1 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.sourcil2 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+/*----------------- YEUX  ---------------- */
+
+.eye-left, .eye-right{
+    display: grid;
+    background-color: rgb(211, 211, 211);
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.eye-left{
+    animation: blink 1s linear 1;
+}
+
+/* body:hover{
+    transform: translateX(2000px);
+} */
+
+.eye-left {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.eye-right {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+            /* --- PUPILLES -----*/
+
+.inner-eye-left, .inner-eye-right {
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    width: 50%;
+    height: 50%;
+    background: rgb(0, 66, 151);
+    border-radius: 50%;
+}
+
+.pupil-left, .pupil-right {
+    justify-self: center;
+    align-self: center;
+    width: 60%;
+    height: 60%;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+/*----------------- NEZ  ---------------- */
+
+.nez {
+    grid-area: 3 / 3 / 4 / 4;
+    background-color: rgb(255, 255, 255);
+    border : 0.5px solid black;
+    margin: 10% 35%;
+    border-radius: 0% 0% 100% 100%;
+    animation: nose 5s;
+    transform-origin: top;
+    animation: myfirst 5s infinite;
+}
+
+/*----------------- BOUCHE  ---------------- */
+
+.bouche {
+    grid-area: 4 / 2 / 5 / 5;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 0.5fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(199, 199, 199);
+    border-radius: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 8px solid rgb(196, 0, 0);
+    z-index: 2;
+    /* animation: mouth 5s;
+    transform-origin: top; */
+}
+
+             /* --- DENTS -----*/
+
+.bouche :nth-child(1), .bouche :nth-child(2), .bouche :nth-child(3), .bouche :nth-child(4), .bouche :nth-child(5), .bouche :nth-child(6), .bouche :nth-child(7) {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 10%;
+    height: 70%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0% 0% 30% 30%;
+}
+
+.bouche :nth-child(1) {
+    margin-top: 1%;
+    margin-left: 7%;
+    border-radius: 20% 0% 30% 30%;
+}
+
+.bouche :nth-child(2) {
+    margin-left: 20%;
+    background-color: rgb(82, 82, 82);
+    border-radius: 0% 0% 50% 50%;
+}
+
+.bouche :nth-child(3) {
+    margin-left: 33%;
+}
+.bouche :nth-child(4) {
+    margin-left: 46%;
+}
+.bouche :nth-child(5) {
+    margin-left: 59%;
+}
+.bouche :nth-child(6) {
+    margin-left: 72%;
+}
+.bouche :nth-child(7) {
+    margin-left: 85%;
+    margin-top: 1%;
+    border-radius: 0% 20% 30% 30%;
+}
+
+/* ----------------------------------------------------------------------
+-------------------                 BODY 1                     ----------
+-------------------                  COU                       ----------
+-----------------------------------------------------------------------*/
+
+.Body1 {
+    grid-area: 3 / 1 / 4 / 5;
+    /* background-color: rgb(178, 178, 178); */
+    display: grid;
+    grid-template-columns: 4fr 3fr 4fr;
+    grid-template-rows: 1fr;
+}
+
+.cou {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: rgb(255, 255, 255);
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+/* ----------------------------------------------------------------------
+-------------------                 BODY 2                     ----------
+-------------------                 CORPS                      ----------
+-----------------------------------------------------------------------*/
+
+.Body2 {
+    grid-area: 4 / 1 / 5 / 4;
+    /* background-color: rgb(153, 153, 153); */
+    display: grid;
+    grid-template-columns: 4fr 2.5fr 4fr;
+    grid-template-rows: 4fr;
+}
+
+/* --------------- GILET ------------------ */
+
+.corps {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    background-color: rgb(0, 0, 0);
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5% 5% 30% 30%;
+}
+
+.triangle{
+    border-top : 100px solid rgb(255, 255, 255);
+    border-right : 150px solid transparent;
+    border-left : 150px solid transparent;
+    justify-self: center;
+   }
+
+/* -------------- BOUTTONS ---------------- */
+
+.button1, .button2, .button3 {
+    width: 6%;
+    height: 20%;
+    background-color: red;
+    border-radius: 50%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    z-index: 1;
+}
+
+            /* --- FILE -----*/
+
+.file{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 0%;
+    border-left: 2px solid rgb(255, 255, 255);
+    padding-bottom: 25%;
+}
+
+.file1{
+    grid-area: 1 / 1 / 2 / 2 ;
+}
+
+.file2 {
+    grid-area: 1 / 2 / 2 / 3 ; 
+}
+
+.file3 {
+    grid-area: 2 / 1 / 3 / 2 ;
+}
+
+.file4 {
+    grid-area: 2 / 2 / 3 / 3 ;
+}
+
+.file1, .file3{
+    margin-left: 10%;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    justify-self: center;
+    align-self: center; 
+}
+
+.file2, .file4{
+    margin-right: 20%;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    justify-self: center;
+    align-self: center; 
+}
+
+/*----------------- BRAS  ---------------- */
+
+.brasGauche {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: white;
+    margin-left: 85%;
+    animation: Gauche 2s linear 5;
+    animation-delay: 1s ;
+    transform-origin: top right;
+    border-radius: 50% 5% 50% 50%;
+}
+
+.brasDroit {
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: white;
+    margin-right: 85%;
+    animation: Droit 2s linear 5;
+    animation-delay: 1s;
+    transform-origin: top left;
+    border-radius: 5% 50% 50% 50%;
+}
+
+        /* --- MANCHES -----*/
+
+.mancheG{
+    border-radius: 50% 5% 5% 5%;
+}
+
+.mancheD{
+    border-radius: 5% 50% 5% 5%;
+}
+
+.mancheG, .mancheD{
+    width: 100%;
+    height: 50%;
+    background-color: black;
+}
+
+/* ----------------------------------------------------------------------
+-------------------                 BODY 3                     ----------
+-------------------                 JAMBES                     ----------
+-----------------------------------------------------------------------*/
+
+.Body3 {
+    grid-area: 5 / 1 / 6 / 4;
+    /* background-color: rgb(196, 195, 195); */
+    display: grid;
+    grid-template-columns: 4.5fr 1fr 0.1fr 1fr 4.5fr;
+    z-index: 1;
+}
+
+.jambeGauche {
+    grid-area: 1 / 2 / 2 / 3;
+    border-radius: 40% 15% 15% 15%
+}
+
+.jambeDroite{
+    grid-area: 1 / 4 / 2 / 5;
+    border-radius: 15% 40% 15% 15%;
+}
+
+.jambeGauche, .jambeDroite {
+    background: repeating-linear-gradient(90deg, transparent, transparent 50px,
+    rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px,
+    transparent 56px, transparent 63px,
+    rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px,
+    transparent 69px, transparent 116px,
+    rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
+  repeating-linear-gradient(0deg, transparent, transparent 50px,
+    rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px,
+    transparent 56px, transparent 63px,
+    rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px,
+    transparent 69px, transparent 116px,
+    rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
+  repeating-linear-gradient(-45deg, transparent, transparent 5px,
+    rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px),
+  repeating-linear-gradient(45deg, transparent, transparent 5px,
+    rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
+}
+
+
+/* ----------------------------------------------------------------------
+-------------------                 FOOTER                     ----------
+-------------------                  PIEDS                     ----------
+-----------------------------------------------------------------------*/
+
+footer {
+    grid-area: 6 / 1 / 7 / 4;
+    /* background-color: rgb(195, 196, 196); */
+    display: grid;
+    grid-template-columns: 4.5fr 1fr 0.1fr 1fr 4.5fr;
+    z-index: 1;
+}
+
+.piedGauche{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.piedDroit{
+    grid-area: 1 / 4 / 2 / 5;
+}
+.piedGauche, .piedDroit {
+    background-color: rgb(221, 0, 0);
+    position : relative;
+    margin-top: 5%;
+    border-radius: 10% 10% 50% 50%;
+    display: flex;
+}
+
+.adidas1 {
+    margin-left : 43%;
+    border-left: 5px solid rgb(236, 236, 236);
+}
+
+.adidas2, .adidas3{
+    margin-left: 5%;
+    border-left: 5px solid rgb(236, 236, 236);
+}
+
+
+
+.heart {
+    position: absolute;
+    background-color: red;
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 2%;
+    height: 4%;
+    border-radius: 0% 22% 0% 22%;
+    -webkit-transform: rotate(45deg);
+    -webkit-animation: paul 2S infinite;
+}
+
+.heart2 {
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    margin-left: 14.29%;
+    margin-top: 4.3%;
+    width: 2%;
+    height: 4%;
+    border-radius: 50%;
+    -webkit-animation: paul 2S infinite;
+}
+
+.heart3 {
+    position: absolute;
+    background-color: rgb(253, 0, 0);
+    margin-left: 15.66%;
+    margin-top: 4.3%;
+    width: 2%;
+    height: 4%;
+    border-radius: 50%;
+    -webkit-animation: paul 2S infinite;
+}
+
+
+/* ----------------------------------------------------------------------
+-------------------               KEY FRAMES                   ----------
+-----------------------------------------------------------------------*/
+
+/*----------------- BRAS  ---------------- */
+
+@keyframes Droit {
+    0% {
+        transform: rotateZ(-0deg);
+    }
+    25% {
+        transform: rotateZ(-150deg);
+    }
+    50% {
+        transform: rotateZ(-100deg);
+    }
+    70% {
+        transform: rotateZ(-150deg);
+    }
+    110% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes Gauche {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(150deg);
+    }
+    50% {
+        transform: rotateZ(100deg);
+    }
+    70% {
+        transform: rotateZ(150deg);
+    }
+    110% {
+        transform: rotateZ(0deg);
+    }
+}
+
+/*----------------- BOUCHE  ---------------- */
+
+@keyframes mouth {
+    20% {
+        transform: scale(1, 2);
+    }
+}
+
+/*----------------- YEUX  ---------------- */
+
+/* @keyframes oeil {
+    20% {
+        transform: scale(1, 0.5);
+    }
+} */
+
+@keyframes blink {
+    0%, 10% {
+        height: 100%;
+    }
+    10%, 20% {
+        height: 80%;
+    }
+    20%, 30% {
+        height: 60%;
+    }
+    30%, 40% {
+        height: 40%;
+    }
+    40%, 50% {
+        height: 20%;
+    }
+    50%, 60% {
+        height: 40%;
+    }
+    60%, 70% {
+        height: 60%;
+    }
+    70%, 80% {
+        height: 80%;
+    }
+    80%, 90% {
+        height: 90%;
+    }
+    90%, 100% {
+        height: 100%;
+    }
+}
+
+/*----------------- NEZ  ---------------- */
+
+@keyframes nose {
+    20% {
+        transform: rotateZ(180deg);
+    }
+}
+
+
+@keyframes myfirst {
+    0%   {background: rgb(255, 255, 255); left: 0px; top: 0px;}
+    25%  {background: rgb(131, 255, 158); left: 200px; top: 0px;}
+    50%  {background: rgb(0, 255, 55); left: 200px; top: 0px;}
+    75%  {background: rgb(131, 255, 158); left: 0px; top: 0px;}
+    100% {background: rgb(255, 255, 255); left: 0px; top: 0px;}
+  }
+
+  @keyframes paul {
+      0% {
+          scale: 1;
+      }
+      50% {
+          scale: 1.5;
+      }
+      100% {
+        scale: 1;
+    }
+  }
+
+  
+  
+
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  @-webkit-keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  @-moz-keyframes move-background {    
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+      @-webkit-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+/*   
+  .background-container{
+      grid-area: 1 / 1 / 7 / 4;
+      z-index: -3;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right: 0;
+  }
+  
+  .stars {
+   background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+   position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+        z-index: -3;
+  }
+  
+  .twinkling{
+      width:10000px;
+      height: 100%;
+      background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -2;
+      
+      -moz-animation:move-background 70s linear infinite;
+    -ms-animation:move-background 70s linear infinite;
+    -o-animation:move-background 70s linear infinite;
+    -webkit-animation:move-background 70s linear infinite;
+    animation:move-background 70s linear infinite;
+      
+  }
+  
+  .clouds{
+      width:10000px;
+      height: 100%;
+      background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+  
+     -moz-animation:move-background 150s linear infinite;
+    -ms-animation:move-background 150s linear infinite;
+    -o-animation:move-background 150s linear infinite;
+    -webkit-animation:move-background 150s linear infinite;
+    animation:move-background 150s linear infinite;
+  }
+  img{
+    height: 70vh;
+    width:70vh;
+    position: absolute;
+    z-index: -1;
+    right: 20px;
+  }
+   */
